@@ -33,7 +33,8 @@ x-view .contents h1 {
     margin: 0;
 }
 
-x-listview.list li:before {
+x-listview.list li:before,
+x-listview.bazList li:before {
     content: ' ';
     display: inline-block;
     width: 15px;

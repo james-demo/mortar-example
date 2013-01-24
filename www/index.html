@@ -22,7 +22,7 @@
 
     <x-view id="app">
       <x-view class="home">
-        <x-view class="homesub">
+        <x-view class="homesub" data-first="true">
           <header>
             <h1>Home</h1>
           </header>
@@ -62,7 +62,7 @@
 
         <x-view class="details">
           <header><h1>Details</h1></header>
-          
+
           This item has the title "<span class="title"></span>"
         </x-view>
       </x-view>
@@ -79,16 +79,35 @@
 
       <x-view class="bar">
         <h1>Section #2</h1>
-        <button>Press me!</button>
+        <button data-view=".baz">Press me!</button>
         <p>
           This is yet another section. The button above does nothing.
         </p>
+      </x-view>
+
+      <x-view class="baz">
+        <x-listview class="bazList">
+          <header>
+            <h1>A second, hidden list.</h1>
+          </header>
+          <footer>
+            <p>Where is this view??</p>
+          </footer>
+        </x-listview>
+
+        <x-view class="bazDeets">
+          <header>
+            <h1>Some more details</h1>
+          </header>
+          <p>The name is <strong class="title"></strong></p>
+        </x-view>
       </x-view>
 
       <footer>
         <button data-view=".home">Home</button>
         <button data-view=".foo">Section #1</button>
         <button data-view=".bar">Section #2</button>
+        <button data-view=".baz">New section</button>
       </footer>
     </x-view>
 

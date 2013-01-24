@@ -50,5 +50,15 @@ define(function(require) {
         details.render = function(item) {
             $('.title', this).text(item.get('title'));
         };
+
+        var secondList = $('.bazList').get(0);
+        secondList.add({ title: 'OHAI, Wellington',
+                         desc: 'This is a note to you all!',
+                         date: new Date() });
+        secondList.nextView = 'x-view.bazDeets';
+        var bazDeets = $('.bazDeets').get(0);
+        bazDeets.render = function(item) {
+            $('.title', this).text(item.get('title'));
+        };
     });
 });
