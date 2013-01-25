@@ -26,12 +26,14 @@ body {
   overflow: hidden;
 }
 .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: white;
   text-align: center;
-  margin-top: 5em;
-  color: #dddddd;
+  color: #aaaaaa;
 }
 .list ul {
   list-style: none;
@@ -44,14 +46,30 @@ body {
   border-top: 1px solid grey;
   cursor: pointer;
 }
-#app ._contents {
-  display: block;
+.anim-background {
   width: 100%;
   height: 100%;
+  background-color: #dddddd;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10000;
 }
 x-view,
 x-listview {
   background-color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
 }
 x-view > header,
 x-listview > header,
@@ -116,9 +134,17 @@ x-listview > ._contents {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100%;
+  height: 100%;
 }
 x-listview > ._contents > .contents {
   padding: 0;
+}
+._list li.highlighted {
+  background-color: #99bbdd;
+}
+@keyframes slideIn {
+  
 }
 @font-face {  
   font-family: 'MozTTLight';  
@@ -142,8 +168,7 @@ x-view.foo {
 x-view .contents h1 {
     margin: 0;
 }
-x-listview.list li:before,
-x-listview.bazList li:before {
+x-listview.list li:before {
     content: ' ';
     display: inline-block;
     width: 15px;
