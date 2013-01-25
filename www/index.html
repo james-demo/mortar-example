@@ -17,37 +17,6 @@
     <!-- <button id="install-btn">Install</button>     -->
 
     <x-app>
-      <x-listview id="home" class="list" data-first="true">
-        <header>
-          <h1>MyRecipes</h1>
-          <button class="add">+</a>
-        </header>
-      </x-listview>
-
-      <x-view class="detail">
-        <header>
-          <h1 class="title"></h1>
-          <button data-view="x-view.edit">Edit</button>
-        </header>
-        <h2>Ingredients</h2>
-        <ul class="ingredients"></ul>
-        <h2>Instructions</h2>
-        <ol class="instructions"></ol>
-      </x-view>
-
-      <x-view class="edit">
-        <header>
-          <h1>Edit</h1>
-        </header>
-        <div class="title">Title: <input type="text" name="title"></div>
-        <div class="ingredients">Ingredients:<br><input name="ingredients"></div>
-        <div class="instructions">Instructions:<br><input name="instructions"></div>
-        <button type="submit" class="add">Save</button>
-      </x-view>
-
-      <footer>
-        <button data-view="#home">Home</button>
-      </footer>
     </x-app>
 
     <div class="loading">Loading...</div>
